@@ -3,7 +3,11 @@ import requests
 headers={
     "User-Agent": "ETO OH"
 }
-response = requests.get("https://httpbin.org/get?a=b",headers=headers,params={'a':'b'})
+response = requests.post("https://httpbin.org/post",
+                         headers=headers,
+                         params={'a':'b'},
+                         json ={'username':"secret"}
+                         )
 
 
 #if response.status_code == 200:
